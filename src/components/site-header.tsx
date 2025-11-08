@@ -3,20 +3,40 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/use-cart";
-import { Star, ShoppingCart, Sparkles } from "lucide-react";
+import { Star, ShoppingCart, Sparkles, Search, LogOut, User } from "lucide-react";
 import { CartSheet } from "./cart-sheet";
 import { useEffect, useState } from "react";
+import { useAuth } from "@/contexts/auth-context";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function SiteHeader() {
   const { cartCount } = useCart();
+  const { user, signOut } = useAuth();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
+  async function handleSignOut() {
+    try {
+      await signOut();
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  }
+
   const navLinks = [
     { href: "/products", label: "Shop" },
+    { href: "/search", label: "Search" },
     { href: "/recommendations", label: "Recommendations" },
   ];
 
@@ -56,9 +76,37 @@ export function SiteHeader() {
               </Button>
             </CartSheet>
 
-            <Button asChild size="sm">
-              <Link href="/login">Login</Link>
-            </Button>
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="rounded-full">
+                    <Avatar className="h-8 w-8">
+                      <AvatarImage src={user.photoURL || undefined} alt={user.displayName || "User"} />
+                      <AvatarFallback>
+                        {user.displayName?.charAt(0).toUpperCase() || user.email?.charAt(0).toUpperCase() || "U"}
+                      </AvatarFallback>
+                    </Avatar>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuLabel>
+                    <div className="flex flex-col space-y-1">
+                      <p className="text-sm font-medium leading-none">{user.displayName || "User"}</p>
+                      <p className="text-xs leading-none text-muted-foreground">{user.email}</p>
+                    </div>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={handleSignOut}>
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Log out</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Button asChild size="sm">
+                <Link href="/login">Login</Link>
+              </Button>
+            )}
           </nav>
         </div>
       </div>
