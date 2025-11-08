@@ -1,0 +1,58 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A mystical cosmic background for the hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1628317887507-3c3e2ddd3281?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYWxheHklMjBuZWJ1bGF8ZW58MHx8fHwxNzYyNDk3MTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "galaxy nebula"
+    },
+    {
+      "id": "product-1",
+      "description": "7 Mukhi Rudraksha bead",
+      "imageUrl": "https://images.unsplash.com/photo-1624862301587-9f3900f0b8d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxydWRyYWtzaGElMjBiZWFkfGVufDB8fHx8MTc2MjUxNDEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rudraksha bead"
+    },
+    {
+      "id": "product-2",
+      "description": "Blue Sapphire gemstone",
+      "imageUrl": "https://images.unsplash.com/photo-1735480165343-96034e9528f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzYXBwaGlyZSUyMGdlbXN0b25lfGVufDB8fHx8MTc2MjQzMzczOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sapphire gemstone"
+    },
+    {
+      "id": "product-3",
+      "description": "Crystal Healing Wand",
+      "imageUrl": "https://images.unsplash.com/photo-1677249490921-3246e81f19e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjcnlzdGFsJTIwd2FuZHxlbnwwfHx8fDE3NjI1MTQxMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "crystal wand"
+    },
+    {
+      "id": "product-4",
+      "description": "Zodiac Constellation Necklace",
+      "imageUrl": "https://images.unsplash.com/photo-1708370151741-f27c7ea9e248?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx6b2RpYWMlMjBuZWNrbGFjZXxlbnwwfHx8fDE3NjI0MTAxMDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "zodiac necklace"
+    },
+    {
+      "id": "product-5",
+      "description": "Amethyst Geode",
+      "imageUrl": "https://images.unsplash.com/photo-1630189174104-b6ddd0c885be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhbWV0aHlzdCUyMGdlb2RlfGVufDB8fHx8MTc2MjUxNDEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "amethyst geode"
+    },
+    {
+      "id": "product-6",
+      "description": "Astrology Tarot Deck",
+      "imageUrl": "https://images.unsplash.com/photo-1600430188203-bbb8dac79646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0YXJvdCUyMGNhcmRzfGVufDB8fHx8MTc2MjQ5NDY0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tarot cards"
+    },
+    {
+      "id": "product-7",
+      "description": "Singing Bowl",
+      "imageUrl": "https://images.unsplash.com/photo-1619968747465-f56008f0da50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzaW5naW5nJTIwYm93bHxlbnwwfHx8fDE3NjI0ODgxMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "singing bowl"
+    },
+    {
+      "id": "product-8",
+      "description": "Emerald Gemstone",
+      "imageUrl": "https://images.unsplash.com/photo-1605821771565-35e0d046a2fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbWVyYWxkJTIwZ2Vtc3RvbmV8ZW58MHx8fHwxNzYyNDMzNzM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "emerald gemstone"
+    }
+  ]
+}
