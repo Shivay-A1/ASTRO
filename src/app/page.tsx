@@ -19,32 +19,76 @@ export default async function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
 
   return (
-    <div className="flex flex-col">
-      <section className="relative w-full h-[60vh] md:h-[70vh] text-primary-foreground overflow-hidden">
-        {heroImage && (
-           <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
+ <div className="flex flex-col min-h-screen">
+
+      {/* 🔮 Hero Section - Clean Style */}
+      <section className="relative w-full flex justify-center items-center py-16 bg-[#f3e5c0] dark:bg-gray-950 overflow-visible">
+        
+        {/* 🌿 Left Decorative Line with Icons */}
+        <div className="absolute left-[5%] top-[8%] bottom-[8%] flex flex-col justify-between items-center">
+          <Image src="/icons/leaf-top.png" alt="Top Left Decoration" width={65} height={65} className="opacity-100" />
+          <div className="w-[3px] flex-1 bg-[#5a4423]" />
+          <Image src="/icons/leaf-bottom.png" alt="Bottom Left Decoration" width={65} height={65} className="opacity-100" />
+        </div>
+
+        {/* 🌿 Right Decorative Line with Icons */}
+        <div className="absolute right-[5%] top-[8%] bottom-[8%] flex flex-col justify-between items-center">
+          <Image src="/icons/leaf-top1.png" alt="Top Right Decoration" width={65} height={65} className="opacity-100" />
+          <div className="w-[3px] flex-1 bg-[#5a4423]" />
+          <Image src="/icons/bottom.png" alt="Bottom Right Decoration" width={65} height={65} className="opacity-100" />
+        </div>
+
+        {/* 🪔 Main Image Area */}
+        <div className="relative w-[80%] md:w-[87%] lg:w-[80%] h-[55vh] rounded-3xl overflow-hidden shadow-2xl z-10">
+          <Image
+            src="/images/r.png"
+            alt="Astro Ritual Banner"
             fill
-            className="object-cover"
+            className="object-cover object-center rounded-3xl"
             priority
-            data-ai-hint={heroImage.imageHint}
           />
-        )}
-        <div className="absolute inset-0 bg-primary/60" />
-        <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
-          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-md">
-            Discover Your Cosmic Connection
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg md:text-xl">
-            Authentic rudraksha, powerful gemstones, and celestial tools to align your spirit with the stars.
-          </p>
-          <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/products">Explore The Cosmos</Link>
-          </Button>
+
+          {/* 🕉️ Left Content: Heading + Icons */}
+          <div className="absolute inset-0 flex flex-col justify-center items-start pl-10 md:pl-16 space-y-8 z-10">
+            <h1 className="font-headline text-5xl md:text-6xl font-bold tracking-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+              Begin Your Ritual
+            </h1>
+
+            {/* 🔯 Ritual Steps Icons */}
+            <div className="flex flex-row items-center space-x-10 mt-2">
+              <div className="flex flex-col items-center text-center">
+                <Image src="/icons/qr.png" alt="Scan your QR" width={48} height={48} />
+                <p className="mt-2 text-white text-sm font-semibold">Scan your QR</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <Image src="/icons/essence.png" alt="Choose your Essence" width={48} height={48} />
+                <p className="mt-2 text-white text-sm font-semibold">Choose your Essence</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <Image src="/icons/ritual.png" alt="Play your Ritual" width={48} height={48} />
+                <p className="mt-2 text-white text-sm font-semibold">Play your Ritual</p>
+              </div>
+            </div>
+
+            <Button
+              asChild
+              size="lg"
+              className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <Link href="/products">Explore The Cosmos</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
+      {/* 🌠 Auto-Sliding Product Categories */}
+      <section className="py-12 md:py-20 bg-gray-50 dark:bg-gray-900">
+        <h2 className="text-center text-3xl font-bold mb-8 text-gray-800 dark:text-white">
+          Explore Our Categories
+        </h2>
+      </section>
+
+      {/* 🌟 Featured Products */}
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -57,6 +101,7 @@ export default async function Home() {
               Handpicked celestial treasures to begin your astrological journey.
             </p>
           </div>
+
           {featuredProducts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {featuredProducts.map((product) => (
@@ -65,9 +110,12 @@ export default async function Home() {
             </div>
           ) : (
             <div className="text-center py-8">
-              <p className="text-muted-foreground">Featured products will appear here soon.</p>
+              <p className="text-muted-foreground">
+                Featured products will appear here soon.
+              </p>
             </div>
           )}
+
           <div className="text-center mt-12">
             <Button asChild variant="outline">
               <Link href="/products">View All Products</Link>
