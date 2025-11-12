@@ -7,82 +7,120 @@ body {
 }
 
 @layer base {
+  /* COLOR THEME ADAPTED FROM PROVIDED IMAGE (warm cream, brown, gold, soft green) */
   :root {
-    --background: 270 27% 90%;
-    --foreground: 271 100% 10%;
-    --card: 270 27% 95%;
-    --card-foreground: 271 100% 10%;
-    --popover: 270 27% 95%;
-    --popover-foreground: 271 100% 10%;
-    --primary: 271 100% 25%;
+    /* Main tones */
+    --background: 38 30% 95%;              /* very light warm cream */
+    --foreground: 27 18% 16%;              /* deep warm brown for text */
+
+    /* Surfaces */
+    --card: 38 28% 98%;                    /* card background (slightly lighter) */
+    --card-foreground: 27 18% 16%;         /* card text */
+
+    --popover: 38 28% 98%;
+    --popover-foreground: 27 18% 16%;
+
+    /* Primary (calls-to-action: warm gold/ochre) */
+    --primary: 40 75% 36%;                 /* warm golden/ochre */
     --primary-foreground: 0 0% 98%;
-    --secondary: 270 20% 85%;
-    --secondary-foreground: 271 100% 10%;
-    --muted: 270 20% 88%;
-    --muted-foreground: 270 10% 40%;
-    --accent: 51 100% 50%;
-    --accent-foreground: 271 100% 15%;
-    --destructive: 0 84.2% 60.2%;
+
+    /* Secondary (soft beige tiles) */
+    --secondary: 36 18% 88%;
+    --secondary-foreground: 27 18% 16%;
+
+    /* Muted / subtle background elements */
+    --muted: 36 18% 92%;
+    --muted-foreground: 30 12% 45%;
+
+    /* Accent (soft sage/green for little icons & badges) */
+    --accent: 84 30% 43%;
+    --accent-foreground: 27 18% 16%;
+
+    /* Danger / destructive */
+    --destructive: 6 70% 52%;
     --destructive-foreground: 0 0% 98%;
-    --border: 270 15% 80%;
-    --input: 270 15% 85%;
-    --ring: 271 100% 25%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+
+    /* Borders / inputs / rings */
+    --border: 30 14% 82%;
+    --input: 38 20% 94%;
+    --ring: 40 75% 34%;
+
+    /* Charts — a palette tuned to the earthy theme */
+    --chart-1: 40 80% 50%;   /* ochre/gold */
+    --chart-2: 12 70% 40%;   /* terracotta */
+    --chart-3: 84 30% 40%;   /* sage green */
+    --chart-4: 330 35% 70%;  /* soft rose */
+    --chart-5: 20 55% 40%;   /* warm brown */
+
+    /* Radius and sidebar */
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-background: 38 28% 96%;
+    --sidebar-foreground: 27 18% 16%;
+    --sidebar-primary: 30 18% 12%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 38 22% 95%;
+    --sidebar-accent-foreground: 27 18% 16%;
+    --sidebar-border: 30 13% 91%;
+    --sidebar-ring: 40 75% 34%;
   }
+
+  /* Dark mode: keep same mood but inverted contrast (optional) */
   .dark {
-    --background: 271 100% 10%;
-    --foreground: 270 27% 90%;
-    --card: 271 100% 12%;
-    --card-foreground: 270 27% 90%;
-    --popover: 271 100% 10%;
-    --popover-foreground: 270 27% 90%;
-    --primary: 270 27% 90%;
-    --primary-foreground: 271 100% 10%;
-    --secondary: 271 100% 15%;
-    --secondary-foreground: 270 27% 90%;
-    --muted: 271 100% 15%;
-    --muted-foreground: 270 10% 60%;
-    --accent: 51 100% 50%;
-    --accent-foreground: 271 100% 10%;
-    --destructive: 0 62.8% 30.6%;
+    --background: 27 17% 12%;               /* deep chocolate background */
+    --foreground: 28 18% 92%;               /* pale text */
+    --card: 27 17% 10%;
+    --card-foreground: 28 18% 92%;
+    --popover: 27 17% 10%;
+    --popover-foreground: 28 18% 92%;
+    --primary: 40 75% 46%;                  /* brighter ochre on dark */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 27 15% 18%;
+    --secondary-foreground: 28 18% 92%;
+    --muted: 27 14% 16%;
+    --muted-foreground: 28 10% 70%;
+    --accent: 84 30% 50%;
+    --accent-foreground: 27 17% 12%;
+    --destructive: 6 70% 45%;
     --destructive-foreground: 0 0% 98%;
-    --border: 271 100% 20%;
-    --input: 271 100% 20%;
-    --ring: 270 27% 90%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 27 14% 20%;
+    --input: 27 14% 14%;
+    --ring: 40 75% 46%;
+    --chart-1: 40 80% 60%;
+    --chart-2: 12 70% 45%;
+    --chart-3: 84 30% 45%;
+    --chart-4: 330 35% 75%;
+    --chart-5: 20 55% 50%;
+    --sidebar-background: 27 14% 10%;
+    --sidebar-foreground: 28 18% 92%;
+    --sidebar-primary: 30 18% 14%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 27 12% 14%;
+    --sidebar-accent-foreground: 28 18% 92%;
+    --sidebar-border: 27 12% 14%;
+    --sidebar-ring: 40 75% 46%;
   }
 }
 
+/* Keep your existing base behavior but use the updated vars */
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* small helper: use primary as button background example */
+  .btn-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Heading style suggestion to match the aesthetic */
+  .font-headline {
+    /* optionally use a serif for a more crafted, elegant look; comment out if you want to keep Arial */
+    /* font-family: "Playfair Display", serif; */
+    letter-spacing: 0.2px;
+    color: hsl(var(--foreground));
   }
 }

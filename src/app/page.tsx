@@ -123,6 +123,62 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      
+      {/* 🌟 Premium Features Section */}
+      <section className="relative w-full py-20 bg-gradient-to-r from-[#f3e5c0] via-[#f8edcc] to-[#fffaf0]">
+        <div className="relative max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#4B2E2E] mb-12">
+            Why Choose Us
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1 */}
+            <div className="flex flex-col items-center justify-start p-6 rounded-3xl bg-white/30 border border-white/40 shadow-md transform transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl h-[180px]">
+              <div className="w-16 h-16 mb-3 flex-shrink-0">
+                <Image src="/icons/logo-genuine.png" alt="Genuine Logo" width={64} height={64} />
+              </div>
+              <h3 className="text-xl font-bold text-[#4B2E2E] mb-1 text-center">100% Genuine Products</h3>
+              <p className="text-sm text-[#4B2E2E] text-center">
+                Fully inspected by experts and authorized labs.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="flex flex-col items-center justify-start p-6 rounded-3xl bg-white/30 border border-white/40 shadow-md transform transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl h-[180px]">
+              <div className="w-16 h-16 mb-3 flex-shrink-0">
+                <Image src="/icons/logo-energized.png" alt="Energized Logo" width={64} height={64} />
+              </div>
+              <h3 className="text-xl font-bold text-[#4B2E2E] mb-1 text-center">Energized Rudraksha</h3>
+              <p className="text-sm text-[#4B2E2E] text-center">
+                Provided with Rudraabhishek Pooja in Shri Daksheshawar Mahadev Temple.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="flex flex-col items-center justify-start p-6 rounded-3xl bg-white/30 border border-white/40 shadow-md transform transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl h-[180px]">
+              <div className="w-16 h-16 mb-3 flex-shrink-0">
+                <Image src="/icons/logo-returns.png" alt="Returns Logo" width={64} height={64} />
+              </div>
+              <h3 className="text-xl font-bold text-[#4B2E2E] mb-1 text-center">Easy Returns & Shopping</h3>
+              <p className="text-sm text-[#4B2E2E] text-center">
+                Return within 7 days if unsatisfied.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="flex flex-col items-center justify-start p-6 rounded-3xl bg-white/30 border border-white/40 shadow-md transform transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl h-[180px]">
+              <div className="w-16 h-16 mb-3 flex-shrink-0">
+                <Image src="/icons/logo-shipping.png" alt="Shipping Logo" width={64} height={64} />
+              </div>
+              <h3 className="text-xl font-bold text-[#4B2E2E] mb-1 text-center">Fastest Shipping Network</h3>
+              <p className="text-sm text-[#4B2E2E] text-center">
+                Delivered in 4-5 working days with fastest shipping.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
